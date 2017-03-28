@@ -29,6 +29,54 @@
  */
 #define  KF(name)  key_functions__##name
 
+void P(m_ham)(void) {KF(type_string)( PSTR("I like ham!"));}
+void R(m_ham)(void) {}
+void P(m_ham1)(void) {KF(type_string)( PSTR("Ham is the best!"));}
+void R(m_ham1)(void) {}
+void P(m_ham2)(void) {KF(type_string)( PSTR("Eat more ham!"));}
+void R(m_ham2)(void) {}
+void P(m_paul)(void) {KF(type_string)( PSTR("Paul is the worst."));}
+void R(m_paul)(void) {}
+void keys__press__m_copy(void) {
+    usb__kb__set_key(true, KEYBOARD__LeftControl);
+    usb__kb__set_key(true, KEYBOARD__c_C);
+    usb__kb__send_report();
+    usb__kb__set_key(false, KEYBOARD__LeftControl);
+    usb__kb__set_key(false, KEYBOARD__c_C);
+}
+void R(m_copy)(void) {}
+void keys__press__m_paste(void) {
+    usb__kb__set_key(true, KEYBOARD__LeftControl);
+    usb__kb__set_key(true, KEYBOARD__v_V);
+    usb__kb__send_report();
+    usb__kb__set_key(false, KEYBOARD__LeftControl);
+    usb__kb__set_key(false, KEYBOARD__v_V);
+}
+void R(m_paste)(void) {}
+void keys__press__m_cut(void) {
+    usb__kb__set_key(true, KEYBOARD__LeftControl);
+    usb__kb__set_key(true, KEYBOARD__x_X);
+    usb__kb__send_report();
+    usb__kb__set_key(false, KEYBOARD__LeftControl);
+    usb__kb__set_key(false, KEYBOARD__x_X);
+}
+void R(m_cut)(void) {}
+void keys__press__m_altT(void) {
+    usb__kb__set_key(true, KEYBOARD__LeftControl);
+    usb__kb__set_key(true, KEYBOARD__t_T);
+    usb__kb__send_report();
+    usb__kb__set_key(false, KEYBOARD__LeftControl);
+    usb__kb__set_key(false, KEYBOARD__t_T);
+}
+void R(m_altT)(void) {}
+void keys__press__m_tab(void) {
+    usb__kb__set_key(true, KEYBOARD__LeftAlt);
+    usb__kb__set_key(true, KEYBOARD__t_T);
+    usb__kb__send_report();
+    usb__kb__set_key(false, KEYBOARD__LeftAlt);
+    usb__kb__set_key(false, KEYBOARD__t_T);
+}
+void R(m_tab)(void) {}
 
 /**                                             macros/MATRIX_LAYER/description
  * Mapping from spatial position to matrix position.

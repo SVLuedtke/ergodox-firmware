@@ -21,7 +21,7 @@ F_CPU := 16000000
 # processor speed, in Hz; max value is 16000000 (16MHz); must match
 # initialization in source
 
-KEYBOARD_LAYOUT := qwerty--ben
+KEYBOARD_LAYOUT := ham
 # default layout for this keyboard
 
 KEYBOARD_LAYOUTS := \
@@ -30,7 +30,8 @@ KEYBOARD_LAYOUTS := \
 	qwerty--ben \
 	colemak--kinesis-mod \
 	dvorak--kinesis-mod \
-	qwerty--kinesis-mod
+	qwerty--kinesis-mod \
+	ham
 # a list of all available layouts for this keyboard
 
 # -----------------------------------------------------------------------------
